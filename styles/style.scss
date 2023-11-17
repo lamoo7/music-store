@@ -640,7 +640,7 @@ footer {
     svg {
         fill: $text-primary;
         cursor: pointer;
-        transition: all $transition-speed/6 ease;
+        transition: all calc($transition-speed/6) ease;
         &:hover {
             fill: $color-secondary;
         }
@@ -825,7 +825,7 @@ footer {
         text-decoration: none;
         border-bottom: 2px transparent solid;
         padding-right: 0.25em;
-        transition: all $transition-speed/6 ease;
+        transition: all calc($transition-speed/6) ease;
         svg {
             height: 1.25em;
             margin: 0.25em;
@@ -1069,7 +1069,7 @@ form#signup {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: all $transition-speed/4 ease;
+        transition: all calc($transition-speed/4) ease;
         width: 100%;
         padding: 1em;
 
