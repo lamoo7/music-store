@@ -56,9 +56,9 @@
                     <td>' . $price . '$</td>
                     <td>
                       <div class="quantity-input">
-                        <button class="quantity-minus" data-product-id="' . $id . '" hx-post="utilities/decrementAmount.php?id=' . $id . '" hx-trigger="click" hx-target="#quantity-' . $id . '">-</button>
-                        <input type="text" pattern="[0-9]*" inputmode="numeric" min="1" max="999" id="quantity-' . $id . '" value="' . $amount . '">
-                        <button class="quantity-plus" data-product-id="' . $id . '" hx-post="utilities/incrementAmount.php?id=' . $id . '" hx-trigger="click" hx-target="#quantity-' . $id . '">+</button>
+                        <button class="quantity-minus" hx-post="utilities/decrementAmount.php?id=' . $id . '" hx-trigger="click" hx-swap="innerHTML" hx-target="#quantity-' . $id . '">-</button>
+                        <div id="quantity-' . $id . '">' . $amount . '</div>
+                        <button class="quantity-plus" hx-post="utilities/incrementAmount.php?id=' . $id . '" hx-trigger="click" hx-swap="innerHTML" hx-target="#quantity-' . $id . '">+</button>
                       </div>
                     </td>
                     <td class="subtotal" hx-post="utilities/updateSubtotal.php?id=' . $id . '" hx-trigger="every 500ms">' . $subtotal . '$</td>
@@ -99,36 +99,6 @@
     <?php require_once "footer.html"; ?>
 
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var quantityInputs = document.querySelectorAll('.quantity-input input');
-      var minusButtons = document.querySelectorAll('.quantity-minus');
-      var plusButtons = document.querySelectorAll('.quantity-plus');
-
-      minusButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-          var productId = button.getAttribute('data-product-id');
-          var quantityInput = document.getElementById('quantity-' + productId);
-          var currentValue = parseInt(quantityInput.value, 10);
-
-          if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-          }
-        });
-      });
-
-      plusButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-          var productId = button.getAttribute('data-product-id');
-          var quantityInput = document.getElementById('quantity-' + productId);
-          var currentValue = parseInt(quantityInput.value, 10);
-
-          quantityInput.value = currentValue + 1;
-        });
-      });
-    });
-  </script>
 
 </body>
 

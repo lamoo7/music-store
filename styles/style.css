@@ -732,7 +732,7 @@ footer {
   cursor: pointer;
   color: #dcddde;
 }
-.quantity-input input {
+.quantity-input div {
   outline: none;
   width: 40px;
   height: 40px;
@@ -741,6 +741,9 @@ footer {
   border: none;
   border-radius: 50%;
   background-color: #dcddde;
+  color: #000000;
+  display: grid;
+  place-items: center;
 }
 
 #checkout {
