@@ -18,7 +18,7 @@
 
   <?php require_once "menu.html"; ?>
 
-  <div id="content" style="display:flex; align-items: flex-start;">
+  <div id="content" style="display:grid; grid-template-columns: auto auto">
     <table class="cart-table">
       <thead>
         <tr>

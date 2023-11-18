@@ -694,12 +694,10 @@ footer {
 }
 
 .cart-table {
-    width: 100%;
     border-collapse: collapse;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 70px;
-    margin-right: 24.5%;
     th,
     td {
         padding: 10px;
@@ -760,10 +758,9 @@ footer {
     margin: 10px;
     padding: 10px;
     background-color: $bg-secondary;
-    position: fixed;
-    right: 0;
-    top: 0;
     border-radius: 10px;
+    height: min-content;
+    width: fit-content;
     h2 {
         margin: 10px;
         color: $color-secondary;

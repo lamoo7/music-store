@@ -683,12 +683,10 @@ footer {
 }
 
 .cart-table {
-  width: 100%;
   border-collapse: collapse;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 70px;
-  margin-right: 24.5%;
 }
 .cart-table th,
 .cart-table td {
@@ -750,10 +748,11 @@ footer {
   margin: 10px;
   padding: 10px;
   background-color: #141418;
-  position: fixed;
-  right: 0;
-  top: 0;
   border-radius: 10px;
+  height: -moz-min-content;
+  height: min-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #checkout h2 {
   margin: 10px;
