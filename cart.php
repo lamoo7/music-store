@@ -18,7 +18,8 @@
 
   <?php require_once "menu.html"; ?>
 
-  <div id="content" style="display:grid; grid-template-columns: auto auto">
+  <div id="content" style="display:grid; grid-template-columns: auto 360px;">
+  <div id="table-container">
     <table class="cart-table">
       <thead>
         <tr>
@@ -78,6 +79,7 @@
         ?>
       </tbody>
     </table>
+    </div>
     <div id="checkout">
       <h2>Summary</h2>
       <div style="display: flex; justify-content: space-between;">

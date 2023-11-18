@@ -693,11 +693,17 @@ footer {
     }
 }
 
+#table-container {
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
+
+    @include scrollbar;
+}
+
 .cart-table {
+    width: calc(100% - 20px);
     border-collapse: collapse;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 70px;
+    margin: 10px;
     th,
     td {
         padding: 10px;
@@ -761,6 +767,8 @@ footer {
     border-radius: 10px;
     height: min-content;
     width: fit-content;
+    justify-self: right;
+    position: fixed;
     h2 {
         margin: 10px;
         color: $color-secondary;

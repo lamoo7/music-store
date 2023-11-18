@@ -682,11 +682,25 @@ footer {
   background: linear-gradient(#6649b8, #000000);
 }
 
+#table-container {
+  overflow-y: scroll;
+  height: calc(100vh - 70px);
+}
+#table-container::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.5rem;
+}
+#table-container::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+#table-container::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
 .cart-table {
+  width: calc(100% - 20px);
   border-collapse: collapse;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 70px;
+  margin: 10px;
 }
 .cart-table th,
 .cart-table td {
@@ -753,6 +767,8 @@ footer {
   height: min-content;
   width: -moz-fit-content;
   width: fit-content;
+  justify-self: right;
+  position: fixed;
 }
 #checkout h2 {
   margin: 10px;
